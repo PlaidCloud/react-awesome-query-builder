@@ -11,12 +11,14 @@ import {isJsonLogic} from "../utils/stuff";
 // helpers
 Object.defineProperty(Array.prototype, "uniq", {
   enumerable: false,
+  configurable: true,
   value: function () {
     return Array.from(new Set(this));
   }
 });
 Object.defineProperty(Array.prototype, "to_object", {
   enumerable: false,
+  configurable: true,
   value: function () {
     return this.reduce((acc, [f, fc]) => ({ ...acc, [f]: fc }), {});
   }
